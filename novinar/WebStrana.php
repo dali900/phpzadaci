@@ -4,7 +4,7 @@ include "db.php";
 
 
 /**
- *  Inicijalizuje polja (html tagove)
+ *  Inicijalizija polja (html tagove)
  *  Formira polja $title,$h,$p i dodaje njihove vrednosti u $body
  *  $body se dodoaje u glavno polje $html i na kraju se zatvaraju 
  *  nedostajuci tagovi </html> i </body>
