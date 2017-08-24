@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<Ispiti>
+  <Ispit>
+    <naziv>Informacione tehnologije</naziv>
+    <profesor>Petar Peric</profesor>
+  </Ispit>
+  <Ispit>
+    <naziv>Matematika</naziv>
+    <profesor>Boris Borovic</profesor>
+  </Ispit>
+  <Ispit>
+    <naziv>Osnovi Programiranja</naziv>
+    <profesor>Nenad Matic</profesor>
+  </Ispit>
+</Ispiti>
