@@ -2,7 +2,7 @@
 # Ucitava konekciju sa bazom
 include "db.php";
 
-
+ 
 /**
  *  Inicijalizacija polja (html tagove)
  *  Formira polja $title,$h,$p i dodaje njihove vrednosti u $body
