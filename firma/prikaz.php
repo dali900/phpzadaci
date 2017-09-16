@@ -40,5 +40,9 @@
 			</table>
 		</fieldset>
 	</form>
+	<br>
+	<br>
+	<a href="6ZadatakXML.php">XML insert</a><br>
+	<a href="index.php">Pocetna</a>
 </body>
 </html>

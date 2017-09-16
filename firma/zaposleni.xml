@@ -3,7 +3,7 @@
 		<szaposleni>11</szaposleni>
 		<ime>Petar Petrovic</ime>
 		<radno_mesto>Admin</radno_mesto>
-		<plata>30000.1</plata>
+		<plata>30100</plata>
 	</radnik>
 	<radnik>
 		<szaposleni>12</szaposleni>
@@ -11,16 +11,17 @@
 		<radno_mesto>HR</radno_mesto>
 		<plata>40001</plata>
 	</radnik>
-	<!-- <radnik>
-		<szaposleni>100</szaposleni>
-		<ime>Filip Filipovic</ime>
-		<radno_mesto>IT Support</radno_mesto>
-		<plata>39600</plata>
-	</radnik>
 	<radnik>
-		<szaposleni>101</szaposleni>
-		<ime>Milica Milic</ime>
+		<szaposleni>103</szaposleni>
+		<ime>Sale</ime>
+		<radno_mesto>Marketing</radno_mesto>
+		<plata>28900</plata>
+	</radnik>
+	<!-- <radnik>
+		<szaposleni>203</szaposleni>
+		<ime>Nikola</ime>
 		<radno_mesto>Support</radno_mesto>
-		<plata>38000</plata>
+		<plata>48000</plata>
 	</radnik> -->
+
 </zaposleni>

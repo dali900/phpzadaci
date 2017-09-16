@@ -1,6 +1,7 @@
 <?php 
 include "konekcija.php";
 include "pretragaZaposlenih.php";
+include "pretragaFirme.php";
 
  ?>
 
@@ -14,7 +15,11 @@ include "pretragaZaposlenih.php";
 			border: 1px solid black; 
 			border-collapse: collapse;
 			padding: 5px;
-	}
+		
+		}
+		.bold_klasa {
+			font-weight: bold;
+		}
 </style>
 </head>
 <body>
@@ -69,12 +74,50 @@ include "pretragaZaposlenih.php";
 
 		<fieldset>
 			<legend>Firme</legend>
-			<form action="pretragaFirme.php" method="POST">
+			<form action="" method="POST">
 				Naziv: <input type="text" name="naziv">
 				<input type="submit" name="submit_firme" value="Pretrazi">
 			</form>
+			<!-- Rezultat pretrage -->
+			<?php if ($sql_result_firme != ''): ?>
+				REZULTAT:
+				<div class="my_table">
+					<table>
+						<th>Sifra</th><th>Naziv</th><th>Kapital</th><th>Zaposleni</th>
+						<?php foreach($firme as $firma) { ?>
+						<tr>
+							<td><?=$firma['sfirme'];?></td>
+							<td><?=$firma['naziv'];?></td>
+							<td><?=$firma['kapital'];?></td>
+							<td>
+								<!-- Rezultati zaposlenih trazene firme -->
+								<table>
+									<th>Sifra</th><th>Ime</th><th>Radno mesto</th><th>Plata</th>
+									<?php foreach($firme_zaposleni as $zap) { ?>
+									<!-- Ukoliko je direktor bice boldovan --> 
+									<tr class="<?php if ($firma['sdirektora'] == $zap['szaposleni']){ 
+													echo 'bold_klasa'; } ?>">									
+										<td><?=$zap['szaposleni'];?></td>
+										<td><?=$zap['ime'];?></td>
+										<td><?=$zap['radno_mesto'];?></td>
+										<td><?=$zap['plata'];?></td>
+									</tr>
+									<?php } ?> <!-- Kraj iteracije rezultata zaposlenih odredjene firme -->
+								</table>
+							</td>
+						</tr>
+						<?php } ?> <!-- Kraj iteracije rezultata trazene firme -->
+					</table>
+				</div>
+			<?php endif ?><!--  Kraj if-a za rezltate -->
 		</fieldset>
 	</fieldset>
 	</form>
+
+	<br>
+	<br>
+
+	<a href="prikaz.php">Prikaz svih zaposlenih</a><br>
+	<a href="6ZadatakXML.php">XML insert</a>
 </body>
 </html>

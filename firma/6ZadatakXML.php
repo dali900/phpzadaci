@@ -17,8 +17,14 @@ foreach ($zaposleni_xml->radnik as $radnik_xml) {
 	# Tamo gde imamo istu sifru zaposlenog u tabeli ZAPOSLENI i XML fajlu vrsimo azuriranje tabele zaposleni (UPDATE)
 	# u suprotnom, unosimo novi red u tabeli (INSERT)
 	# array_column(niz, kolona) - php funkcija koja koja cuva sve vrednosti iz kolone 'szaposleni' u novi niz
-	# array_search(podatak_za_pretragu, niz) - php funkcija koja pretrazuje niz, fraca FALSE ukolike ne pronadje
-	if (array_search($radnik_xml->szaposleni, array_column($zaposleni_db,'szaposleni'))) { 
+	# array_search(podatak_za_pretragu, niz) - php funkcija koja pretrazuje niz, vraca broj indexa pronadjenog 
+	#elementa, ne vraca nista u koliko nema rezultata
+
+	$trazi_zaposlenog = array_search($radnik_xml->szaposleni, array_column($zaposleni_db,'szaposleni'));
+
+	# Potrebno je dodati i uslov (===) ukoliko je jednako 0 tj. ako je array_search() svoj element pronasao u 
+	#prvom 'nulti index' elementu niza, u suprotnom if nulu cita kao false
+	if ($trazi_zaposlenog === 0 || $trazi_zaposlenog !='') {  
 		$sql_query_update = "UPDATE zaposleni 
 							 SET ime = '".$radnik_xml->ime."',
 							 	 radno_mesto = '".$radnik_xml->radno_mesto."',
@@ -40,3 +46,8 @@ foreach ($zaposleni_xml->radnik as $radnik_xml) {
 }
 
  ?>
+<br>
+<br>
+
+<a href="prikaz.php">Prikaz svih zaposlenih</a><br>
+<a href="index.php">Pocetna</a>
