@@ -1,0 +1,26 @@
+<zaposleni>
+	<radnik>
+		<szaposleni>11</szaposleni>
+		<ime>Petar Petrovic</ime>
+		<radno_mesto>Admin</radno_mesto>
+		<plata>30000.1</plata>
+	</radnik>
+	<radnik>
+		<szaposleni>12</szaposleni>
+		<ime>Marko Markovic</ime>
+		<radno_mesto>HR</radno_mesto>
+		<plata>40001</plata>
+	</radnik>
+	<!-- <radnik>
+		<szaposleni>100</szaposleni>
+		<ime>Filip Filipovic</ime>
+		<radno_mesto>IT Support</radno_mesto>
+		<plata>39600</plata>
+	</radnik>
+	<radnik>
+		<szaposleni>101</szaposleni>
+		<ime>Milica Milic</ime>
+		<radno_mesto>Support</radno_mesto>
+		<plata>38000</plata>
+	</radnik> -->
+</zaposleni>

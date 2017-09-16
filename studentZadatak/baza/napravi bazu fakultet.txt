@@ -1,0 +1,1 @@
+napravi bazu "fakultet"
