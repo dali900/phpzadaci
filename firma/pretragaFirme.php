@@ -33,7 +33,7 @@ if(isset($_POST['submit_firme'])){
 	}
 	# Secemo poslednji OR kako ne bi doslo do MySQL greske
 	$WHERE = rtrim($WHERE, " OR");
-	echo "$WHERE";
+	#echo "$WHERE";
 	$sql_query_frime_zaposleni = "SELECT * FROM firma_zaposleni fz 
 							 LEFT JOIN zaposleni z ON fz.szaposleni = z.szaposleni 
 							 $WHERE ";
