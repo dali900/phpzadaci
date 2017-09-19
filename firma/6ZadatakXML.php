@@ -8,7 +8,7 @@ $sql_result_zaposleni = mysqli_query($sql_konekcija, $sql_query_zaposleni);
 $zaposleni_db = mysqli_fetch_all($sql_result_zaposleni, MYSQLI_ASSOC);
 
 # Ucitava XML fajl
-$zaposleni_xml = simplexml_load_file("zaposleni.xml");
+$zaposleni_xml = simplexml_load_file("zaposleni.xml"); 
 
 # Rezultat array_column funkcije
 // print_r(array_column($zaposleni_db,'szaposleni'));
